@@ -1,0 +1,51 @@
+<include file="Public:header"/>
+<div id="header">
+    <div class="user_info">
+        <span class="font_light1">登陆名：</span><{:getAdminName()}>
+        <span class="split">|</span>
+        <span class="font_light1">中文名：</span><{:getAdminCname()}>
+        <span class="split">|</span>
+        <a href="<{:U('Login/password');}>">修改密码</a>
+        <span class="split">|</span>
+        <a href='<{:U("Login/loginOut")}>' onclick="javascript:return confirm('确定要退出系统?');">退出系统</a>
+    </div>
+    <div class="logo"><img src="__PUBLIC__/image/logo.png"/></div>
+    <div class="nav">
+        <ul>
+            <volist name="topNav" id="vo">
+                <notempty name="vo.selected">
+                    <li class="selected"> <{$key}></li>
+                    <else/>
+                    <a href="<{$vo.link}>">
+                        <li> <{$key}></li>
+                    </a>
+                </notempty>
+            </volist>
+        </ul>
+    </div>
+
+</div>
+
+
+<div id="main">
+    <div id="m_left">
+        <ul>
+            <volist name="leftNav" id="vo">
+                <notempty name="vo.selected">
+                    <li class="selected"> <{$key}>
+                        <div class="icon_text icon_transparent"></div>
+                    </li>
+                    <else/>
+                    <a href="<{$vo.link}>">
+                        <li> <{$key}>
+                            <div class="icon_text icon_transparent"></div>
+                        </li>
+                    </a>
+                </notempty>
+            </volist>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    </script>
+
+    <div id="m_right">

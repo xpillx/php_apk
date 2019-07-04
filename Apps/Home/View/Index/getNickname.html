@@ -1,0 +1,35 @@
+<form method="post">
+    <ul>
+        <li>
+            <div class="l">UID:</div>
+            <div class="r"><textarea name="uid" rows="5" cols="60" placeholder="多个UID用“|”分割"><{$_POST['uid']}></textarea></div>
+        </li>
+        <li>
+            <div class="l"></div>
+            <div class="r"><input type="submit" value="查询" /></div>
+        </li>
+    </ul>
+</form>
+
+<notempty name="data">
+    <div class="clear"></div>
+    <br />
+    <div class="nav">
+        <div class="item selected">
+            <span><div class="icon_grid  icon_transparent"></div>查询结果</span>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <th>ID</th><th>昵称</th><th>注册游戏</th><th>注册时间</th>
+        </tr>
+        <volist name="data" id="vo">
+            <tr>
+                <td><{$vo.id}></td>
+                <td><{$vo.nickname}></td>
+                <td><{$vo.app_id}></td>
+                <td><{$vo.reg_date|localDatetime=###}></td>
+            </tr>
+        </volist>
+    </table>
+</notempty>

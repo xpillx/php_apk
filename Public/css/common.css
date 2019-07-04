@@ -1,0 +1,263 @@
+@charset "utf-8";
+.wrap {
+  text-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.bg-none {
+  background: none;
+}
+/* create an arrow that points left */
+/* create an arrow that points right */
+/* */
+.bd-none {
+  border: none;
+}
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}
+.none {
+  display: none;
+}
+.hide {
+  display: none;
+}
+.block {
+  display: block;
+}
+.s {
+  display: block;
+}
+.inline {
+  display: inline-block;
+}
+.bold {
+  font-weight: bold;
+}
+.normal {
+  font-weight: normal;
+}
+.abs {
+  position: absolute;
+}
+.rel {
+  positon: relative;
+}
+.fix {
+  position: fixed;
+}
+.static {
+  position: static;
+}
+.clear {
+  clear: both;
+}
+.clear5 {
+  clear: both;
+  width: 100%;
+  height: 5px;
+}
+.clear10 {
+  clear: both;
+  width: 100%;
+  height: 10px;
+}
+.clear15 {
+  clear: both;
+  width: 100%;
+  height: 15px;
+}
+.clear20 {
+  clear: both;
+  width: 100%;
+  height: 20px;
+}
+.tcenter {
+  text-align: center;
+}
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.overflow {
+  overflow: hidden;
+}
+.cursor {
+  cursor: pointer;
+}
+/************************* 以上为通用less **********************/
+/*红色icon*/
+/*橘色icon*/
+/*黑色icon*/
+/*绿色icon*/
+/*透明icon*/
+/*----字体大小颜色 start----*/
+/*全局class */
+.font_dark {
+  color: #222222;
+}
+.font_dark1 {
+  color: #222222;
+}
+.font_light {
+  color: #999999;
+}
+.font_light1 {
+  color: #999999;
+}
+.font_error {
+  color: #ff0033;
+}
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}
+.h {
+  display: none;
+}
+.show {
+  display: block;
+}
+.center {
+  text-align: center;
+}
+.vertical {
+  vertical-align: middle;
+}
+.clear {
+  clear: both;
+}
+.clear5 {
+  clear: both;
+  height: 5px;
+}
+.clear10 {
+  clear: both;
+  height: 10px;
+}
+.tleft {
+  text-align: left;
+}
+.tright {
+  text-align: right;
+}
+.text_40 {
+  width: 40px;
+}
+.text_60 {
+  width: 60px;
+}
+.text_100 {
+  width: 100px;
+}
+.text_200 {
+  width: 200px;
+}
+.text_300 {
+  width: 300px;
+}
+.text_per_100 {
+  width: 100% ;
+}
+.per10 {
+  width: 10%;
+}
+.per16 {
+  width: 16%;
+}
+.per20 {
+  width: 20%;
+}
+.per25 {
+  width: 25%;
+}
+.per30 {
+  width: 30%;
+}
+.per33 {
+  width: 33%;
+}
+.per34 {
+  width: 34%;
+}
+.per40 {
+  width: 40%;
+}
+.per50 {
+  width: 50%;
+}
+.per60 {
+  width: 60%;
+}
+.per70 {
+  width: 70%;
+}
+.per80 {
+  width: 80%;
+}
+.per90 {
+  width: 90%;
+}
+.per100 {
+  width: 100%;
+}
+.h {
+  display: none;
+}
+.bubble {
+  color: orange;
+  display: inline-block;
+}
+.radius_5 {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.breakall {
+  text-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+}
+.breaknone {
+  white-space: nowrap;
+}
+.readonly {
+  color: #666666;
+  background-color: #dedede;
+}
+.state_error_color {
+  color: #c14830;
+}
+/*运行错误时字体颜色*/
+.state_normal_color {
+  color: #555555;
+}
+/*正常时字体颜色*/
+.state_success_color {
+  color: #1fa1eb;
+}
+/*运行成功时字体颜色*/
+.state_error_border {
+  border-color: #c14830;
+}
+/*运行错误时边框颜色*/
+.state_normal_border {
+  border-color: #555555;
+}
+/*正常时边框颜色*/
+.state_success_border {
+  border-color: #1fa1eb;
+}
+/*运行成功时边框颜色*/

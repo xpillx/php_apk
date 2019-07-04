@@ -1,0 +1,26 @@
+<div class="mutiltext-<{$name}>">
+    <input type="button" class="mutiltext-<{$name}>-add" value="增加"/>
+    <div class="clear5"></div>
+    <volist name="htmlData" id="vo">
+        <div class="item">
+            <{$vo}> <div class="icon_circle icon_delete <{$name}>-remove"></div>
+            <br />
+        </div>
+    </volist>
+</div>
+
+<script>
+    $(function(){
+        var name = '<{$name}>';
+
+        $(".mutiltext-"+ name +"-add").on('click',function(){
+            var t = $(this).parent();
+            var copy = $('.item',t).last().clone();
+            $(t).append(copy);
+        });
+
+        $(".mutiltext-"+ name ).on('click',"."+ name +"-remove",function(){
+            $(this).parent().remove();
+        });
+    });
+</script>

@@ -1,0 +1,56 @@
+<style>
+    #select_appid_box{
+        border:solid 1px #ddd;
+        overflow: hidden;
+        padding: 5px;
+    }
+</style>
+<present name="allAppModel">
+    <label for="app_id_all_1">全部游戏</label>
+    <input name="app_id_all" id="app_id_all_1" type="radio" value="1" checked="checked"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="app_id_all_0">部分游戏</label>
+    <input name="app_id_all" id="app_id_all_0" type="radio" value="0" />
+
+    <div id="select_appid_box" style="display: none">
+        <present name="exceptAppModel">
+            <input name="app_id_except" type="checkbox" value="1" checked="checked"/>
+            <else />
+            <input name="app_id_except" type="checkbox" value="1" />
+        </present>
+        排除模式
+        <{$selectMove}>
+    </div>
+<else />
+    <label for="app_id_all_1">全部游戏</label>
+    <input name="app_id_all" id="app_id_all_1" type="radio" value="1" />
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="app_id_all_0">部分游戏</label>
+    <input name="app_id_all" id="app_id_all_0" type="radio" value="0" checked="checked"/>
+
+    <div id="select_appid_box">
+    <present name="exceptAppModel">
+        <input name="app_id_except" type="checkbox" value="1" checked="checked"/>
+        <else />
+        <input name="app_id_except" type="checkbox" value="1" />
+    </present>
+    排除模式
+
+    <{$selectMove}>
+    </div>
+</present>
+
+<script>
+    $(function(){
+        $("input[name='app_id_all']").on("click",function(){
+            if(  $("input[name='app_id_all']:checked").val() == 1)
+                $("#select_appid_box").hide();
+            else
+                $("#select_appid_box").show();
+        });
+
+
+
+    });
+
+</script>

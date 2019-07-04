@@ -1,0 +1,538 @@
+@charset "utf-8";
+.pie(){
+    //behavior: url(/pie.php);
+}
+@icon_white_url :url(../../image/micons-18-white.png);
+@icon_black_url : url(../../image/micons-18-black.png);;
+
+
+
+.loading_img() {background: url(../../image/loading.gif) ;}
+
+.font(){
+  //font-family: Arial,Verdana, Helvetica, sans-serif, "宋体";
+  font-family: "微软雅黑","黑体",tahoma;
+}
+
+.ff() {
+  font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+}
+
+.radius(@radius:5px) {
+border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  .pie;
+}
+
+.radius-tl(@tl) {
+  -webkit-top-left-border-radius: @tl;
+  -moz-top-left-border-radius: @tl;
+  border-top-left-radius: @tl;
+    .pie;
+}
+
+.radius-tr(@tr) {
+  -webkit-top-right-border-radius: @tr;
+  -moz-top-right-border-radius: @tr;
+  border-top-right-radius: @tr;
+    .pie;
+}
+
+.radius-bl(@bl) {
+  -webkit-bttom-left-border-radius: @bl;
+  -moz-bttom-left-border-radius: @bl;
+  border-bttom-left-radius: @bl;
+    .pie;
+}
+
+.radius-br(@br) {
+  -webkit-bottom-right-border-radius: @br;
+  -moz-bottom-right-border-radius: @br;
+  border-bottom-right-radius: @br;
+    .pie;
+}
+
+.radius-4(@tl:5px,@bl:5px,@tr:5px,@br:5px) {
+  -webkit-border-radius: @tl @bl @tr @br;
+  -moz-border-radius: @tl @bl @tr @br;
+  border-radius: @tl @bl @tr @br;
+  .pie;
+}
+
+.opacity(@val : 0.5) {
+  -moz-opacity: @val;
+  -khtml-opacity: @val;
+  opacity: @val;
+  @what : (  @val * 100 );
+  filter: ~"alpha(opacity=@{what})";
+}
+
+
+.appearance(@style : none)   //@style = [ none , button , listitem , searchfield , textarea , menulist ]
+{
+  -webkit-appearance: @style;
+  -moz-appearance:    @style;
+  appearance:         @style;
+}
+
+.shadow(@in-x  , @in-y , @in-b, @in-p , @in-color , @out-x  , @out-y , @out-b ,@out-p , @out-color ) {
+  -webkit-box-shadow: @in-x @in-y @in-b @in-p @in-color inset, @out-x @out-y @out-b @out-p @out-color;
+  -moz-box-shadow: @in-x @in-y @in-b @in-p @in-color inset, @out-x @out-y @out-b @out-p @out-color;
+  box-shadow: @in-x @in-y @in-b @in-p @in-color inset, @out-x @out-y @out-b @out-p @out-color;
+}
+
+.shadow-out (@x: 0px, @y: 3px, @blur: 5px, @pad : 0px, @color: @c000000  ) {
+  -webkit-box-shadow: @x @y @blur @pad @color;
+  -moz-box-shadow: @x @y @blur @pad @color;
+  box-shadow: @x @y @blur @pad @color;
+}
+
+.shadow-in(@x: 0px, @y: 3px, @blur: 5px, @pad : 0px, @color: @c000000  ) {
+  -webkit-box-shadow: inset @x @y @blur @pad @color;
+  -moz-box-shadow: inset @x @y @blur @pad @color;
+  box-shadow: inset @x @y @blur @pad @color;
+}
+
+.text-shadow( @h : 5px , @v:5px ,  @b : 5px , @color :@c000000 ) {
+  text-shadow: @h @v @b  @color;
+}
+
+.wrap {
+  text-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.bd(@color : @cb3b3b3 ,@width:1px  , @style:solid ) {
+  border: @style  @width @color;
+}
+
+.bd-t(@color : @cb3b3b3 ,@width:1px  , @style:solid ) {
+  border-top: @style  @width @color;
+}
+
+.bd-b(@color : @cb3b3b3 ,@width:1px  , @style:solid ) {
+  border-bottom: @style  @width @color;
+}
+
+.bd-l(@color : @cb3b3b3 ,@width:1px  , @style:solid ) {
+  border-left: @style  @width @color;
+}
+
+.bd-r(@color : @cb3b3b3 ,@width:1px  , @style:solid ) {
+  border-right: @style  @width @color;
+}
+
+.box-sizing(@style : border-box) {
+  -webkit-box-sizing: @style;
+  -moz-box-sizing: @style;
+  box-sizing: @style;
+}
+
+.bgcolor(@color) {
+  background-color: @color
+}
+
+.bgimage(@url) {
+  background-image: url("../image/@{url}");
+}
+
+.bgsize(@x :100% ,@y :100%) {
+  background-size: 100% 100%;
+}
+
+.bgrepeat(@style : no-repeat) {
+  background-repeat: @style;
+}
+
+.bgposition(@x , @y) {
+  background-position: @x @y;
+}
+
+.bg-none {
+  background: none;
+}
+
+.appearance(@style : none)//@style = [ none , button , listitem , searchfield , textarea , menulist ]
+{
+  -webkit-appearance: @style;
+  -moz-appearance: @style;
+  appearance: @style;
+}
+
+.mp(@margin : 0px , @padding:0px) {
+  margin: @margin;
+  padding: @padding;
+}
+
+.w(@width : 100%) {
+  width: @width
+}
+
+.h(@height: 100%) {
+  height: @height
+}
+
+.color(@color ) {
+  color: @color
+}
+
+.min-h(@height) {
+  min-height: @height
+}
+
+.max-h(@height) {
+  max-height: @height
+}
+
+.min-w(@width) {
+  min-width: @width
+}
+
+.max-w(@width) {
+  max-width: @width
+}
+
+
+.wh(@width  ,@height) {
+  width: @width;
+  height: @height
+}
+
+.fs(@size :12px ) {
+  font-size: @size;
+}
+
+.fw(@style :bold ) {
+  font-weight: @style;
+}
+
+.fc(@color ) {
+  color: @color;
+}
+
+.lh(@size : 1em ) {
+  line-height: @size;
+}
+
+.pd(@top : 0px ) {
+  padding: @top;
+}
+
+.pd(@top , @right , @bottom , @left)
+{
+    padding: @top @right @bottom @left;
+}
+
+
+.mg(@top : 0px ) {
+  margin: @top;
+}
+
+.pd-t(@size) {
+  padding-top: @size
+}
+
+.pd-b(@size) {
+  padding-bottom: @size
+}
+
+.pd-l(@size) {
+  padding-left: @size
+}
+
+.pd-r(@size) {
+  padding-right: @size
+}
+
+.mg-t(@size) {
+  margin-top: @size
+}
+
+.mg-b(@size) {
+  margin-bottom: @size
+}
+
+.mg-l(@size) {
+  margin-left: @size
+}
+
+.mg-r(@size) {
+  margin-right: @size
+}
+
+.gradient (@origin: top, @start: @c1fa1eb, @stop: @c387bbe) {
+  background-color: @start;
+  background-image: -webkit-linear-gradient(@origin, @start, @stop);
+  background-image: -moz-linear-gradient(@origin, @start, @stop);
+  background-image: -o-linear-gradient(@origin, @start, @stop);
+  background-image: -ms-linear-gradient(@origin, @start, @stop);
+  background-image: linear-gradient(@origin, @start, @stop);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@start, endColorstr=@stop , GradientType='0');
+  -pie-background: linear-gradient(@origin , @start, @stop); /*PIE*/
+  .pie;
+}
+
+.arrow-t (@color , @size : 5px, @type :solid ){
+  width:0px;
+  height:0px;
+  border-left:@size @type transparent;  /* left arrow slant */
+  border-right:@size @type transparent; /* right arrow slant */
+  border-bottom:@size @type @color; /* bottom, add background color here */
+  font-size:0px;
+  line-height:0px;
+}
+.arrow-b (@color , @size : 5px, @type :solid ){
+  width:0px;
+  height:0px;
+  border-left:@size @type transparent;  /* left arrow slant */
+  border-right:@size @type transparent; /* right arrow slant */
+  border-top:@size @type @color; /* bottom, add background color here */
+  font-size:0px;
+  line-height:0px;
+}
+
+/* create an arrow that points left */
+
+.arrow-l (@color , @size : 5px, @type :solid ){
+  border-bottom:@size @type transparent;  /* left arrow slant */
+  border-top:@size @type transparent; /* right arrow slant */
+  //@size2 : @size * 1.2;
+  border-right:@size @type @color; /* bottom, add background color here */
+  font-size:0px;
+  line-height:0px;
+}
+
+
+/* create an arrow that points right */
+.arrow-r (@color , @size : 5px, @type :solid ){
+  width:0px;
+  height:0px;
+  border-bottom:@size @type transparent;  /* left arrow slant */
+  border-top:@size @type transparent; /* right arrow slant */
+  border-left:@size @type @color; /* bottom, add background color here */
+  font-size:0px;
+  line-height:0px;
+}
+
+.text-overflow(@style : ellipsis) {
+  text-overflow: @style;
+  -o-text-overflow: @style;
+}
+
+.text-decoration(@style : none){
+    text-decoration: @style;
+}
+
+.bg-rgba(@rgba) {
+  background-color: @rgba;
+  -pie-background: @rgba;
+  .pie;
+}
+
+.list-style(@style : none) {
+  list-style-type: @style;
+}
+
+/* */
+.bd-none {
+  border: none;
+}
+
+.fleft {
+  float: left
+}
+
+.fright {
+  float: right
+}
+
+.none {
+  display: none
+}
+
+.hide {
+  display: none
+}
+
+.block {
+  display: block
+}
+
+.s {
+  display: block
+}
+
+.inline {
+  display: inline-block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.abs {
+  position: absolute;
+}
+
+.rel {
+  positon: relative;
+}
+
+.fix {
+  position: fixed;
+}
+
+.static {
+  position: static;
+}
+
+.clear {
+  clear: both
+}
+
+.clear5 {
+  clear: both;
+  width: 100%;
+  height: 5px
+}
+
+.clear10 {
+  clear: both;
+  width: 100%;
+  height: 10px
+}
+
+.clear15 {
+  clear: both;
+  width: 100%;
+  height: 15px
+}
+
+.clear20 {
+  clear: both;
+  width: 100%;
+  height: 20px
+}
+
+.tcenter {
+  text-align: center
+}
+
+.tleft {
+  text-align: left
+}
+
+.tright {
+  text-align: right
+}
+
+.overflow {
+  overflow: hidden
+}
+
+.cursor {
+  cursor: pointer
+}
+
+/************************* 以上为通用less **********************/
+
+@c666666: #666666;  //基本颜色
+@c387bbe:#387bbe ;	//链接颜色
+@cffffff:#ffffff;
+@cf9f9f9:#f9f9f9;
+@cf2f2f2 : #f2f2f2;
+@cf6f6f6:#f6f6f6;
+@c999999:#999999;  //阴影颜色
+@c4183c4:#4183c4;  //选中边框颜色  ,重要字体颜色
+@c1fa1eb:#1fa1eb;  //渐变开始色   编译成功
+@c000000:#000000;
+@cb3b3b3:#b3b3b3; //边框色
+@ccccccc:#cccccc;
+@cd2d2d2 : #d2d2d2;
+@cdddddd:#dddddd;
+@caaaaaa:#aaaaaa;
+@c222222:#222222;
+@cff0033:#FF0033; //红色，错误颜色
+@cc14830:#c14830; //编译失败
+@c555555:#555555;  //未编译状态
+@c333333:#333333;
+@c3c3c3c : #3c3c3c; //顶部渐变开始
+@c111111 : #111111; //顶部渐变结束
+@c3e3e3e:#3e3e3e;
+@cefefef : #efefef ; //表格渐变开始色
+@cdedede : #dedede ; //表格渐变结束色
+@c5393c5 : #5393c5; //顶部选中元素渐变色 开始
+@c6facd5 : #6facd5 ; //顶部选中元素渐变色 结束
+@ceeeeee : #eeeeee;
+@cf0f0f0 : #f0f0f0;
+@c3e6b85 : #3e6b85 ; //icon蓝色背景
+@c5eb0e5 : #5eb0e5;  //tab 选中背景颜色
+
+@c0085cf : #0085cf; //icon背景色   默认
+@c3eb249 :#3eb249 ; //jqm 绿色
+@c336699 : #336699 ;
+
+@rgba1 : rgba(102,102,102,0.75);  //顶部阴影
+@rgba2 : rgba(255,255,255,0.15);  //顶部阴影
+@rgba3 : rgba(0, 0, 0, 0.2);
+@rgba4 :rgba(96,167,37,.8); //icon蓝色背景
+@rgba5 : rgba(223,34,39,.8) ; /*红色icon*/
+@rgba6 : rgba(241,167,4,.8) ;/*橘色icon*/
+@rgba7 : rgba(51,51,51,.8) ;/*黑色icon*/
+@rgba8 : rgba(96,167,37,.8) ;/*绿色icon*/
+@rgba9 : rgba(255,255,255,0) ;/*透明icon*/
+
+@icon_white_url :url(../../image/micons-18-white.png);
+@icon_black_url : url(../../image/micons-18-black.png);
+
+
+@base-margin:10px;
+@base-padding:10px;
+.padding(){padding:@base-padding;}
+.padding-b(){padding:@base-padding * 2;}
+.padding-s(){padding:@base-padding / 2;}
+.padding-s2(){padding:6px }
+.margin(){mrgin:@base-margin;}
+.margin-b(){mrgin:@base-margin * 2;}
+.margin-s(){mrgin:@base-margin / 2;}
+
+
+@base-font-size:14px;
+.size(){font-size: @base-font-size}
+.size-b(){font-size: @base-font-size + 2}
+.size-b2(){font-size: @base-font-size + 4}
+.size-b3(){ font-size:@base-font-size + 6}
+.size-b4(){ font-size:@base-font-size + 8}
+.size-s(){ font-size:@base-font-size - 2}
+.size-s2(){ font-size:@base-font-size - 4}
+
+
+.gradient (@origin: top, @start: @c1fa1eb, @stop: @c387bbe) {
+  background-color: @start;
+  background-image: -webkit-linear-gradient(@origin, @start, @stop);
+  background-image: -moz-linear-gradient(@origin, @start, @stop);
+  background-image: -o-linear-gradient(@origin, @start, @stop);
+  background-image: -ms-linear-gradient(@origin, @start, @stop);
+  background-image: linear-gradient(@origin, @start, @stop);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@start, endColorstr=@stop , GradientType='0');
+  -pie-background: linear-gradient(@origin , @start, @stop); /*PIE*/
+  .pie;
+}
+
+.bg-rgba(@rgba)
+{
+  background-color:@rgba;
+  -pie-background : @rgba;
+  .pie;
+}

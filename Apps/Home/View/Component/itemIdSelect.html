@@ -1,0 +1,29 @@
+<style>
+    #item_id_box{
+        border:solid 1px #ddd;
+        overflow: hidden;
+        padding: 5px;
+    }
+</style>
+    <div id="item_id_box">
+    <{$item_list}>
+    </div>
+
+<script>
+    $('select[name="app_id"]').change(function(){
+        var td = $("#item_id_box");
+        var op = $(this).children('option:selected').val();
+        if (op == '') {
+            op = "all";
+            alert("游戏未选择");
+        } else {
+            $.ajax({
+                url : 'index.php?m=Home&c=Component&a=itemListAjax&appId='+op,
+                type : 'get',
+                success : function(data){
+                    td.html(data);
+                }
+            });
+        }
+    });
+</script>

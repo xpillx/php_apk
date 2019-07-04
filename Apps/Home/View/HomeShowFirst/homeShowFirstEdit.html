@@ -1,0 +1,48 @@
+<form method="post" enctype="multipart/form-data">
+    <ul>
+        <li>
+            <div class="l">展示位：</div>
+            <div class="r"><{$html.displayIndex}></div>
+        </li>
+        <li>
+            <div class="l">游戏ID：</div>
+            <div class="r"><{$html.appId}></div>
+        </li>
+        <li>
+            <div class="l">是否展示图片：</div>
+            <div class="r"><{$html.isPic}></div>
+        </li>
+        <li id="icon">
+            <div class="l">ICON上传：</div>
+            <div class="r"><{$html.icon}></div>
+        </li>
+        <li>
+            <{$html.submit}>
+        </li>
+    </ul>
+</form>
+
+<!--<script>-->
+    <!--var $item = $("select[name='isPic']").attr('selected','selected');-->
+    <!--var $value = $item.val();-->
+    <!--if($value==0)-->
+    <!--{-->
+        <!--$("#icon").hide();-->
+    <!--}-->
+    <!--else-->
+    <!--{-->
+        <!--$("#icon").show();-->
+    <!--}-->
+    <!--$("select[name='isPic']").change(function () {-->
+        <!--$value=$(this).children('option:selected').val();-->
+        <!--if($value==0)-->
+        <!--{-->
+            <!--$("#icon").hide();-->
+        <!--}-->
+        <!--else-->
+        <!--{-->
+            <!--$("#icon").show();-->
+        <!--}-->
+    <!--})-->
+<!--</script>-->
+

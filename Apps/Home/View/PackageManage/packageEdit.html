@@ -1,0 +1,83 @@
+<form method="post" enctype="multipart/form-data">
+    <ul>
+        <li>
+            <div class="l">游戏ID：</div>
+            <div class="r"><{$html.appId}></div>
+        </li>
+        <li>
+            <div class="l">描述：</div>
+            <div class="r"><{$html.desc}></div>
+        </li>
+
+        <li>
+            <div class="l">分类：</div>
+            <div class="r"><{$html.category}></div>
+        </li>
+        <li>
+            <div class="l">标签：</div>
+            <div class="r"><{$html.tag}></div>
+        </li>
+        <li>
+            <div class="l">星级：</div>
+            <div class="r"><{$html.star}></div>
+        </li>
+        <li>
+            <div class="l">生产商：</div>
+            <div class="r"><{$html.company}></div>
+        </li>
+        <li>
+            <div class="l">下载次数：</div>
+            <div class="r"><{$html.downloadTimes}></div>
+        </li>
+        <li>
+            <div class="l">名称首字母：</div>
+            <div class="r"><{$html.searchKey}></div>
+        </li>
+        <li>
+            <div class="l">名称全拼：</div>
+            <div class="r"><{$html.searchKeyFull}></div>
+        </li>
+        <li>
+            <div class="l">游戏包上传：</div>
+            <div class="r"><{$html.package}></div>
+        </li>
+        <li>
+            <div class="l">ICON上传：</div>
+            <div class="r"><{$html.icon}></div>
+        </li>
+        <li>
+            <div class="l">首页ICON上传：</div>
+            <div class="r"><{$html.homeIcon}></div>
+        </li>
+        <li>
+            <div class="l">分类ICON上传：</div>
+            <div class="r"><{$html.categoryIcon}></div>
+        </li>
+        <li id="picInput">
+            <div class="l"><input id="addBtn" type="button" onclick="addPic1()" value="添加截图">：</div>
+            <div class="r"><{$html.screenshot}></div>
+        </li>
+        <li>
+            <div class="l">视频上传：</div>
+            <div class="r"><{$html.video}></div>
+        </li>
+
+        <li>
+            <{$html.submit}>
+        </li>
+    </ul>
+</form>
+
+<script>
+    function addPic1(){
+        var addBtn =  document.getElementById('addBtn');
+        var input = document.createElement("input");
+        input.type = 'file';
+        input.name = 'screenshot[]';
+        var picInut = document.getElementById('picInput');
+        picInut.appendChild(input);
+        if(picInut.children.length === 7){
+            addBtn.disabled = 'disabled';
+        }
+    }
+</script>
